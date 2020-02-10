@@ -1,14 +1,24 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../pages/Home";
+
+import appsRouter from "./modules/apps";
 
 Vue.use(VueRouter);
 
 const routes = [
+  appsRouter,
   {
     path: "/",
-    name: "Home",
-    component: Home as any
+    redirect: "/app"
+  },
+  {
+    path: "/login",
+    component: () => import("@/pages/Login"),
+    hidden: true
+  },
+  {
+    path: "/*",
+    component: () => import("@/pages/NotFound")
   }
 ];
 
