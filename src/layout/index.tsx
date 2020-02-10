@@ -6,9 +6,7 @@ export default createComponent({
     return () => (
       <div className="app-container">
         <a-layout>
-          <a-layout-header>
-            <HeaderCustom />
-          </a-layout-header>
+          <HeaderCustom />
           <a-layout-content>
             <router-view />
           </a-layout-content>
