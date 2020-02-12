@@ -15,7 +15,7 @@
     "core-js": "^3.6.4",
     "query-string": "^6.10.1",
     "vue": "^2.6.11",
-    "vue-rest-hooks": "^0.0.1",
+    "vue-rest-hooks": "^0.0.8",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2"
   },
