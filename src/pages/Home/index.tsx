@@ -1,29 +1,27 @@
-import { createComponent, onMounted } from "@vue/composition-api";
+import { createComponent, onMounted, watch } from "@vue/composition-api";
 import { useQuery } from "vue-rest-hooks";
 
+const sleep = (time: number): Promise<void> =>
+  new Promise(resolve => setTimeout(resolve, time));
+
 export default createComponent({
-  setup() {
+  setup(props, ctx) {
     const getToken = (params: { name: string }): Promise<{ name: string }> =>
       new Promise(resolve => {
         resolve(params);
       });
-
-    const { loading, data, error } = useQuery<
-      { name: string },
-      { name: string }
-    >(getToken as any, {
-      variables: {
-        name: "123123"
-      }
-    });
-
-    onMounted(() => {
-      console.log("hello home");
-    });
+    const { loading, refetch } = useQuery(sleep as any, { variables: 3000 });
 
     return () => (
       <div>
-        <a-button>Default</a-button>
+        <a-button
+          loading={loading.value}
+          onClick={() => {
+            refetch({ variables: 1000 });
+          }}
+        >
+          Default
+        </a-button>
       </div>
     );
   }
