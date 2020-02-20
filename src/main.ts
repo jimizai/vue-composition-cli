@@ -5,7 +5,9 @@ import App from "./App";
 import store from "./store";
 import { Button, Layout, Spin } from "ant-design-vue";
 import { WrappedSetupPlugin } from "vue-rest-hooks";
-import "ant-design-vue/dist/antd.less";
+import "./style/bootstrap.css";
+import "./style/reset.less";
+import "./style/theme.less";
 
 Vue.config.productionTip = false;
 Vue.use(VueCompositionApi);
