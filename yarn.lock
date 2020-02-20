@@ -8145,10 +8145,10 @@ vue-ref@^1.0.4:
   resolved "https://registry.npm.taobao.org/vue-ref/download/vue-ref-1.0.6.tgz#b9b3d7d0e290ee2fd3d50d5d7bdac520806cb265"
   integrity sha1-ubPX0OKQ7i/T1Q1de9rFIIBssmU=
 
-vue-rest-hooks@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/vue-rest-hooks/-/vue-rest-hooks-0.1.4.tgz#23a4f4140263a672b51436e1e6198ea977a2e87a"
-  integrity sha512-m23SB3Th+PabfH4Cx8l2CmEjNoFzlnePiT7K9tx2PYBmpt/rjhbco9j9KAdOSp6I7cjCWgfm5VG5M7ci38/kNg==
+vue-rest-hooks@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/vue-rest-hooks/-/vue-rest-hooks-0.1.5.tgz#e812d07b305b23da65c3240100ac513a4fb08b1e"
+  integrity sha512-4uGmOW5Wf038eAbe/RGvfE8zQi/iHedTs+P+VwjSahf2nUoyxf5bNk0tbbKyyJMUoTPwXP9HxeR7lemGKep09g==
   dependencies:
     "@vue/composition-api" "^0.3.4"
     vue "^2.6.11"

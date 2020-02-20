@@ -17,7 +17,7 @@
     "koa-static": "^5.0.0",
     "query-string": "^6.10.1",
     "vue": "^2.6.11",
-    "vue-rest-hooks": "^0.1.4",
+    "vue-rest-hooks": "^0.1.5",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2"
   },
