@@ -2,7 +2,6 @@ const CompressionWebpackPlugin = require("compression-webpack-plugin");
 const productionGzipExtensions = ["js", "css"];
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const isProduction = process.env.NODE_ENV === "production";
 const isTest = process.env.NODE_ENV === "test";
 const isAnalyze = process.env.BUILD_TYPE === "analyze";
@@ -20,11 +19,6 @@ module.exports = {
   css: {
     loaderOptions: {
       less: {
-        modifyVars: {
-          "primary-color": "#F23030",
-          "link-color": "#F23030",
-          "border-radius-base": "2px"
-        },
         javascriptEnabled: true
       }
     }
@@ -53,17 +47,6 @@ module.exports = {
           test: new RegExp("\\.(" + productionGzipExtensions.join("|") + ")$"),
           threshold: 10240,
           minRatio: 0.8
-        })
-      );
-      config.plugins.push(
-        new UglifyJsPlugin({
-          uglifyOptions: {
-            compress: {
-              drop_console: true,
-              //移除console
-              pure_funcs: ["console.log"]
-            }
-          }
         })
       );
     }
